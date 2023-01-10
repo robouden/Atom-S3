@@ -1,0 +1,6 @@
+tanakamasayuki/I2C MPU6886 IMU@^1.0.0
+lib/led_strip
+m5stack/M5AtomS3@^0.0.1
+fastled/FastLED@^3.5.0
+lovyan03/LovyanGFX@^0.4.18
+lib/infrared_tools

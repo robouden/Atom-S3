@@ -10,7 +10,6 @@
             "includePath": [
                 "/home/rob/Documents/Atom S3/include",
                 "/home/rob/Documents/Atom S3/src",
-                "/home/rob/Documents/Atom S3/lib/si5351",
                 "/home/rob/Documents/Atom S3/.pio/libdeps/ATOMS3/M5AtomS3/src",
                 "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                 "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
@@ -225,6 +224,7 @@
                 "/home/rob/Documents/Atom S3/lib/infrared_tools/src",
                 "/home/rob/Documents/Atom S3/lib/led_strip/include",
                 "/home/rob/Documents/Atom S3/lib/led_strip",
+                "/home/rob/Documents/Atom S3/lib/si5351",
                 "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                 "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                 "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",
@@ -261,7 +261,6 @@
                 "path": [
                     "/home/rob/Documents/Atom S3/include",
                     "/home/rob/Documents/Atom S3/src",
-                    "/home/rob/Documents/Atom S3/lib/si5351",
                     "/home/rob/Documents/Atom S3/.pio/libdeps/ATOMS3/M5AtomS3/src",
                     "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src",
                     "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/FS/src",
@@ -476,6 +475,7 @@
                     "/home/rob/Documents/Atom S3/lib/infrared_tools/src",
                     "/home/rob/Documents/Atom S3/lib/led_strip/include",
                     "/home/rob/Documents/Atom S3/lib/led_strip",
+                    "/home/rob/Documents/Atom S3/lib/si5351",
                     "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/ArduinoOTA/src",
                     "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/AsyncUDP/src",
                     "/home/rob/.platformio/packages/framework-arduinoespressif32/libraries/BLE/src",

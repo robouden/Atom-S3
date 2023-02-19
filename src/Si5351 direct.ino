@@ -12,6 +12,7 @@
  */
  
 #include <Wire.h>  
+#include <M5AtomS3.h>
 
 #define Si5351A_ADDR 0x60
 #define MSNA_ADDR 26
@@ -44,15 +45,20 @@ uint8_t MS_ADDR;
 
 
 void setup(){
+Serial.begin(9600);
+delay(1000);
+M5.begin(); 
+
 Wire.begin(38,39);
 Si5351_init(); //Si5351Aの初期化
+M5.Lcd.printf("setup done"); 
 
 //PLLA=900MHz,CLK0=1MHz
 frequency = 27120000;
 divider = 900000000 / frequency;
 if (divider % 2) divider--;
 PLL_Set('A',frequency,divider);
-Si5351_write(CLK0_CTRL,0x4C); //CLK0 Sorce PLLA
+Si5351_write(CLK0_CTRL,0x4F); //CLK0 Source PLLA 4C for 2mA 4F for 8mA output into register 16
 MS_Set(0,divider);
 
 //PLLB=900MHz
@@ -62,11 +68,11 @@ if (divider % 2) divider--;
 PLL_Set('B',frequency,divider);
 
 //CLK1=10MHz
-Si5351_write(CLK1_CTRL,0x6C); //CLK1 Sorce PLLB
+Si5351_write(CLK1_CTRL,0x6C); //CLK1 Source PLLB
 MS_Set(1,divider);
 
 //CLK2=5MHz
-Si5351_write(CLK2_CTRL,0x6C); //CLK2 Sorce PLLB
+Si5351_write(CLK2_CTRL,0x6C); //CLK2 Source PLLB
 divider=divider*2;
 MS_Set(2,divider);
 }

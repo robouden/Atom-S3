@@ -48,11 +48,16 @@ void setup(){
 Serial.begin(9600);
 delay(1000);
 M5.begin(); 
+    // text print
+    M5.Lcd.fillScreen(BLACK);
+    M5.Lcd.setCursor(10, 10);
+    M5.Lcd.setTextColor(WHITE);
+    M5.Lcd.setTextSize(2);
+    M5.Lcd.setRotation(2);
+    M5.Lcd.println("Si5351" );
+    M5.Lcd.println();
 
-Wire.begin(38,39);
-Si5351_init(); //Si5351Aの初期化
-M5.Lcd.printf("setup done"); 
-
+    
 //PLLA=900MHz,CLK0=1MHz
 frequency = 27120000;
 divider = 900000000 / frequency;
@@ -60,6 +65,10 @@ if (divider % 2) divider--;
 PLL_Set('A',frequency,divider);
 Si5351_write(CLK0_CTRL,0x4F); //CLK0 Source PLLA 4C for 2mA 4F for 8mA output into register 16
 MS_Set(0,divider);
+
+//Display text
+    M5.Lcd.setTextColor(GREEN);
+    M5.Lcd.println(frequency);
 
 //PLLB=900MHz
 frequency = 10000000;
